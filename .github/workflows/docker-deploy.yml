@@ -27,9 +27,9 @@ jobs:
       - name: Build Docker image
         run: |
           docker build \
-          -t ghcr.io/sanavi01/jirehcode-landing:latest \
+          -t ghcr.io/sanavi01/jirehcode-landingpage:latest \
           .
 
       - name: Push Docker image
         run: |
-          docker push ghcr.io/sanavi01/jirehcode-landing:latest
+          docker push ghcr.io/sanavi01/jirehcode-landingpage:latest
