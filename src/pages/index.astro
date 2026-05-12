@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import Process from "../components/Process";
+import Services from "../components/Services";
+import Sectors from "../components/Sectors";
+import About from "../components/About";
+import Contact from "../components/Contact";
+import FinalCTA from "../components/FinalCTA";
+import ScrollToTop from "../components/ScrollToTop";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Jireh Code | Optimizamos tu operación. Construimos la solución."
+  description="En Jireh Code analizamos cómo trabaja tu empresa, identificamos lo que frena tu crecimiento y desarrollamos herramientas digitales que generan resultados reales."
+>
+  <Navbar client:load />
+
+  <main>
+    <Hero client:load />
+
+    <div class="h-px bg-gradient-to-r from-transparent via-primary/15 to-transparent" />
+
+    <Process client:visible />
+
+    <div class="h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
+
+    <Services client:visible />
+
+    <div class="h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
+
+    <Sectors client:visible />
+
+    <div class="h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
+
+    <About client:visible />
+
+    <div class="h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
+
+    <Contact client:visible />
+
+    <FinalCTA client:visible />
+    <Footer />
+  </main>
+
+  <ScrollToTop client:load />
+</Layout>

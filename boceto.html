@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jireh Code | Optimizamos tu operación. Construimos la solución.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#f9f9f9",
+                        "on-secondary-container": "#55637a",
+                        "surface": "#f9f9f9",
+                        "on-tertiary-fixed": "#21005e",
+                        "secondary-container": "#d2e0fb",
+                        "primary-container": "#5054ef",
+                        "tertiary-fixed-dim": "#cebdff",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1b1b1b",
+                        "tertiary": "#584297",
+                        "surface-container-highest": "#e2e2e2",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-tertiary-fixed-variant": "#4d378c",
+                        "inverse-primary": "#c0c1ff",
+                        "inverse-surface": "#303030",
+                        "on-surface-variant": "#454555",
+                        "on-primary-container": "#eae8ff",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9f9f9",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary-fixed": "#e8ddff",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e2e2e2",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "on-secondary-fixed-variant": "#39475d",
+                        "outline-variant": "#c6c4d8",
+                        "secondary-fixed": "#d5e3fe",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#05006d",
+                        "tertiary-container": "#715bb1",
+                        "primary-fixed": "#e1e0ff",
+                        "secondary": "#515f76",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#eeeeee",
+                        "on-secondary-fixed": "#0d1c30",
+                        "on-background": "#1b1b1b",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#efe6ff",
+                        "surface-tint": "#4447e3",
+                        "on-primary-fixed-variant": "#2827cc",
+                        "outline": "#767587",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#b9c7e1",
+                        "surface-container-low": "#f3f3f3",
+                        "primary": "#3537d6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "stack-sm": "12px",
+                        "margin": "32px",
+                        "stack-xs": "4px",
+                        "gutter": "24px",
+                        "stack-lg": "48px",
+                        "stack-xl": "80px",
+                        "stack-md": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["12px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "display-md": ["36px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["30px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .level-1-shadow {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        .text-balance {
+            text-wrap: balance;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant shadow-sm backdrop-blur-md bg-opacity-95">
+<div class="flex justify-between items-center h-20 max-w-container-max mx-auto px-margin">
+<a class="text-headline-md font-headline-md font-bold text-primary tracking-tight" href="#">Jireh Code</a>
+<div class="hidden md:flex items-center gap-stack-md">
+<a class="font-label-lg text-label-lg text-primary font-bold border-b-2 border-primary pb-1" href="#">Home</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-colors" href="#process">Process</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-colors" href="#services">Services</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-colors" href="#sectors">Sectors</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-colors" href="#about">About</a>
+<a class="font-label-lg text-label-lg text-secondary hover:text-primary transition-colors" href="#contact">Contact</a>
+</div>
+<a class="bg-primary text-on-primary px-margin py-stack-sm rounded-lg font-label-lg text-label-lg hover:bg-primary-container transition-all active:scale-95 duration-150" href="#contact">
+            Get Started
+        </a>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-background py-stack-xl md:py-[100px]">
+<div class="max-w-container-max mx-auto px-margin grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
+<div class="z-10">
+<span class="inline-block px-stack-md py-stack-xs bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded-full mb-stack-md uppercase tracking-wider">
+                Consultoría &amp; Desarrollo
+            </span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-stack-md leading-tight text-balance">
+                Optimizamos tu operación. <span class="text-primary">Construimos la solución.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-xl max-w-xl text-balance">
+                En Jireh Code analizamos cómo trabaja tu empresa, identificamos lo que frena tu crecimiento y desarrollamos herramientas digitales que generan resultados reales.
+            </p>
+<div class="flex flex-col sm:flex-row gap-stack-md">
+<a class="bg-primary text-on-primary px-stack-lg py-stack-md rounded-xl font-label-lg text-label-lg text-center hover:bg-primary-container transition-all level-1-shadow" href="#contact">
+                    Solicitar diagnóstico gratuito
+                </a>
+<a class="border border-outline text-on-surface px-stack-lg py-stack-md rounded-xl font-label-lg text-label-lg text-center hover:bg-surface-container transition-all" href="#process">
+                    Ver cómo trabajamos
+                </a>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute inset-0 bg-primary/10 rounded-3xl -rotate-1 group-hover:rotate-0 transition-transform duration-500"></div>
+<img alt="Corporate Strategy" class="relative z-10 w-full h-[450px] object-cover rounded-3xl level-1-shadow border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDStOCXK1vQ1g98I0S1jaDZn0jLq4LjLF_6_rAEMGHBzFPleHsSRqQ3azvDeewfZNHfcsEWt5N4RvH7BFtScBGF_uikXUyoQAxG_9YffakNyaBqF9cVUo82KrOm5IQleHIpHsrCKJTu-ozM6At6_n4H_OBEtrt1nEDmaati7r_5NvECMcR2sQ_xmhuqoRt0J07RSSCBeOUe-bMuoGyrXoz4hk4AtniiLvQV-P490USk5Y1ao_4bOxRBTPN7yV2uh3e31vEzjx6UIRf_"/>
+</div>
+</div>
+</section>
+<!-- How We Work (Process) -->
+<section class="py-stack-xl bg-surface-container-low border-y border-outline-variant" id="process">
+<div class="max-w-container-max mx-auto px-margin">
+<div class="text-center mb-stack-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-sm">Un proceso claro, de principio a fin</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">No llegamos a vender un producto. Llegamos a entender tu negocio.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter relative">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-stack-md rounded-xl level-1-shadow border-t-4 border-primary">
+<div class="w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center mb-stack-md font-bold">1</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Analizamos tu operación</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Identificamos cuellos de botella, tareas manuales y oportunidades de mejora concretas.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-stack-md rounded-xl level-1-shadow border-t-4 border-primary">
+<div class="w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center mb-stack-md font-bold">2</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Optimizamos tus procesos</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Rediseñamos la forma en que trabajas antes de escribir una sola línea de código.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-stack-md rounded-xl level-1-shadow border-t-4 border-primary">
+<div class="w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center mb-stack-md font-bold">3</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Implementamos la solución</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Desarrollamos las herramientas digitales que ejecutan las mejoras definidas.</p>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-lowest p-stack-md rounded-xl level-1-shadow border-t-4 border-primary">
+<div class="w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center mb-stack-md font-bold">4</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Acompañamos la adopción</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Capacitamos a tu equipo y ajustamos la solución hasta que funcione de verdad.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-stack-xl" id="services">
+<div class="max-w-container-max mx-auto px-margin">
+<div class="text-center mb-stack-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-sm">¿Qué podemos hacer por tu empresa?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Nuestros servicios están diseñados para trabajar juntos. Puedes empezar por uno y escalar según tus necesidades.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Service 1 -->
+<div class="bg-surface-container-lowest p-stack-lg rounded-xl border border-outline-variant hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-primary text-4xl mb-stack-md" data-icon="troubleshoot">troubleshoot</span>
+<h3 class="font-headline-md text-headline-md mb-stack-md">Optimización y Transformación Digital</h3>
+<p class="font-body-md text-on-surface-variant mb-stack-md">Analizamos tu operación actual, identificamos ineficiencias y rediseñamos tus procesos.</p>
+<ul class="space-y-2 mb-stack-md">
+<li class="flex items-start gap-2 font-body-sm"><span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check_circle">check_circle</span> Diagnóstico operativo</li>
+<li class="flex items-start gap-2 font-body-sm"><span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check_circle">check_circle</span> Optimización de procesos</li>
+</ul>
+<div class="pt-stack-md border-t border-outline-variant">
+<p class="font-label-md text-label-md text-primary uppercase tracking-tighter">Ideal para</p>
+<p class="font-body-sm text-on-surface-variant">Empresas que sienten que "algo no está funcionando bien".</p>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="bg-surface-container-lowest p-stack-lg rounded-xl border border-outline-variant hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-primary text-4xl mb-stack-md" data-icon="developer_board">developer_board</span>
+<h3 class="font-headline-md text-headline-md mb-stack-md">Desarrollo de Plataformas y Soluciones</h3>
+<p class="font-body-md text-on-surface-variant mb-stack-md">Diseñamos y desarrollamos sistemas digitales a medida, no soluciones genéricas.</p>
+<ul class="space-y-2 mb-stack-md">
+<li class="flex items-start gap-2 font-body-sm"><span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check_circle">check_circle</span> Plataformas web a medida</li>
+<li class="flex items-start gap-2 font-body-sm"><span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check_circle">check_circle</span> Soluciones para sector público</li>
+</ul>
+<div class="pt-stack-md border-t border-outline-variant">
+<p class="font-label-md text-label-md text-primary uppercase tracking-tighter">Ideal para</p>
+<p class="font-body-sm text-on-surface-variant">Empresas que necesitan una herramienta propia.</p>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="bg-surface-container-lowest p-stack-lg rounded-xl border border-outline-variant hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-primary text-4xl mb-stack-md" data-icon="bolt">bolt</span>
+<h3 class="font-headline-md text-headline-md mb-stack-md">Automatización y Eficiencia Operativa</h3>
+<p class="font-body-md text-on-surface-variant mb-stack-md">Identificamos tareas repetitivas y las automatizamos para liberar tiempo.</p>
+<ul class="space-y-2 mb-stack-md">
+<li class="flex items-start gap-2 font-body-sm"><span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check_circle">check_circle</span> Integración de sistemas</li>
+<li class="flex items-start gap-2 font-body-sm"><span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check_circle">check_circle</span> Flujos de trabajo automatizados</li>
+</ul>
+<div class="pt-stack-md border-t border-outline-variant">
+<p class="font-label-md text-label-md text-primary uppercase tracking-tighter">Ideal para</p>
+<p class="font-body-sm text-on-surface-variant">Equipos que dedican horas a tareas manuales.</p>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="bg-surface-container-lowest p-stack-lg rounded-xl border border-outline-variant hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-primary text-4xl mb-stack-md" data-icon="web">web</span>
+<h3 class="font-headline-md text-headline-md mb-stack-md">Presencia Digital y Plataformas Web</h3>
+<p class="font-body-md text-on-surface-variant mb-stack-md">Sitios diseñados para captar clientes y transmitir credibilidad profesional.</p>
+<ul class="space-y-2 mb-stack-md">
+<li class="flex items-start gap-2 font-body-sm"><span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check_circle">check_circle</span> Landing pages de conversión</li>
+<li class="flex items-start gap-2 font-body-sm"><span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check_circle">check_circle</span> Portales web institucionales</li>
+</ul>
+<div class="pt-stack-md border-t border-outline-variant">
+<p class="font-label-md text-label-md text-primary uppercase tracking-tighter">Ideal para</p>
+<p class="font-body-sm text-on-surface-variant">Negocios que buscan una presencia digital profesional.</p>
+</div>
+</div>
+<!-- Service 5 -->
+<div class="bg-surface-container-lowest p-stack-lg rounded-xl border border-outline-variant hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-primary text-4xl mb-stack-md" data-icon="school">school</span>
+<h3 class="font-headline-md text-headline-md mb-stack-md">Capacitación y Formación Empresarial</h3>
+<p class="font-body-md text-on-surface-variant mb-stack-md">Acompañamos a los equipos para que la tecnología genere valor real.</p>
+<ul class="space-y-2 mb-stack-md">
+<li class="flex items-start gap-2 font-body-sm"><span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check_circle">check_circle</span> Talleres de diagnóstico</li>
+<li class="flex items-start gap-2 font-body-sm"><span class="material-symbols-outlined text-primary text-sm mt-1" data-icon="check_circle">check_circle</span> Acompañamiento en adopción</li>
+</ul>
+<div class="pt-stack-md border-t border-outline-variant">
+<p class="font-label-md text-label-md text-primary uppercase tracking-tighter">Ideal para</p>
+<p class="font-body-sm text-on-surface-variant">Empresas que han fallado implementando tecnología.</p>
+</div>
+</div>
+<!-- CTA Card -->
+<div class="bg-primary-container p-stack-lg rounded-xl flex flex-col justify-center items-center text-center text-on-primary-container">
+<h3 class="font-headline-md text-headline-md mb-stack-md">¿No sabes por dónde empezar?</h3>
+<p class="font-body-md mb-stack-xl opacity-90">Solicita un diagnóstico gratuito y te ayudamos a identificar el primer paso.</p>
+<a class="bg-surface-container-lowest text-primary px-stack-lg py-stack-sm rounded-lg font-label-lg text-label-lg hover:bg-white transition-all shadow-sm" href="#contact">
+                    Solicitar diagnóstico
+                </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Sectors Section -->
+<section class="py-stack-xl bg-surface-container-low" id="sectors">
+<div class="max-w-container-max mx-auto px-margin">
+<div class="text-center mb-stack-xl">
+<h2 class="font-headline-lg text-headline-lg mb-stack-sm">Sectores en los que trabajamos</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Nuestras soluciones se adaptan al contexto de cada organización.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="p-stack-md bg-surface-container-lowest rounded-xl level-1-shadow flex flex-col items-center text-center border border-outline-variant">
+<div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-stack-md">
+<span class="material-symbols-outlined text-3xl" data-icon="domain">domain</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-sm">Empresas locales</h3>
+<p class="font-body-sm text-on-surface-variant">Digitalizamos y organizamos la operación para que puedan crecer sin caos.</p>
+</div>
+<div class="p-stack-md bg-surface-container-lowest rounded-xl level-1-shadow flex flex-col items-center text-center border border-outline-variant">
+<div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-stack-md">
+<span class="material-symbols-outlined text-3xl" data-icon="account_balance">account_balance</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-sm">Sector público</h3>
+<p class="font-body-sm text-on-surface-variant">Modernizamos procesos y mejoramos la atención al ciudadano con soluciones accesibles.</p>
+</div>
+<div class="p-stack-md bg-surface-container-lowest rounded-xl level-1-shadow flex flex-col items-center text-center border border-outline-variant">
+<div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-stack-md">
+<span class="material-symbols-outlined text-3xl" data-icon="beach_access">beach_access</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-sm">Turismo</h3>
+<p class="font-body-sm text-on-surface-variant">Impulsamos la digitalización de servicios turísticos y la experiencia del visitante.</p>
+</div>
+<div class="p-stack-md bg-surface-container-lowest rounded-xl level-1-shadow flex flex-col items-center text-center border border-outline-variant">
+<div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-stack-md">
+<span class="material-symbols-outlined text-3xl" data-icon="history_edu">history_edu</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-sm">Educación</h3>
+<p class="font-body-sm text-on-surface-variant">Optimizamos la gestión académica y administrativa mediante soluciones prácticas.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section class="py-stack-xl" id="about">
+<div class="max-w-container-max mx-auto px-margin">
+<div class="bg-inverse-surface text-inverse-on-surface rounded-3xl p-stack-lg md:p-stack-xl flex flex-col lg:flex-row gap-stack-lg items-center">
+<div class="flex-1">
+<h2 class="font-display-md text-display-md mb-stack-md">Jireh Code</h2>
+<p class="font-body-lg mb-stack-xl opacity-90 text-balance">
+                    Somos una empresa de consultoría y desarrollo tecnológico enfocada en un objetivo concreto: que tu operación funcione mejor. 
+                    No creemos en la tecnología por la tecnología misma. Creemos en herramientas que resuelven problemas reales, ahorran tiempo y permiten a las organizaciones crecer de manera ordenada y sostenible.
+                </p>
+<p class="font-headline-md text-headline-md text-primary-fixed-dim mb-stack-xl">Trabajamos como aliados, no como proveedores.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-stack-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="verified">verified</span>
+<span class="font-body-md">Primero entendemos, luego proponemos</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="verified">verified</span>
+<span class="font-body-md">Acompañamos todo el proceso</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="verified">verified</span>
+<span class="font-body-md">Soluciones a medida, no genéricas</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="verified">verified</span>
+<span class="font-body-md">Enfocados en resultados medibles</span>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0 w-full lg:w-1/3">
+<img alt="Strategic Collaboration" class="w-full h-80 object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-700 border border-outline/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4DxcDPRBcRmlz6StkSJWwpQTTj7OIPraaI85HbhE6MKA31Rwdwj_IGV8Dasz-mtUFEaFNfkIe-EiMHAttxnGCqEcFhA3fDe34yGKYVwsi6rlEG6y9w6o2w1aBcOOSOSK2J0bq5yCgmjoCjDMJXzUjmbpvM3KCm0JgXd3uqcUpJDdSIliFEksn_hQUId5pJ3p5O_AAMo6UIY70jQqGyYfapJH9GklELwrkd04YgRoCBZ7a3gPQNJaaTO1MGsx2jBjeH1dsP8yhf20q"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-stack-xl bg-surface-container-low" id="contact">
+<div class="max-w-container-max mx-auto px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-stack-xl">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-stack-md text-on-surface">Hablemos sobre tu operación</h2>
+<p class="font-body-lg text-on-surface-variant mb-stack-xl">
+                    La mayoría de empresas tienen oportunidades de mejora claras que no han identificado aún. Nosotros las encontramos contigo.
+                </p>
+<div class="space-y-stack-md mb-stack-xl">
+<div class="flex items-center gap-stack-lg p-stack-md bg-surface-container-lowest rounded-xl level-1-shadow border border-outline-variant">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="mail">mail</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-tighter">Escríbenos al correo</p>
+<p class="font-body-md font-semibold text-on-surface">contacto@jirehcode.com</p>
+</div>
+</div>
+<a class="flex items-center gap-stack-lg p-stack-md bg-[#25D366] text-white rounded-xl level-1-shadow hover:opacity-90 transition-all" href="#">
+<span class="material-symbols-outlined text-3xl" data-icon="chat">chat</span>
+<div>
+<p class="font-label-md text-label-md text-white/80 uppercase tracking-tighter">WhatsApp Directo</p>
+<p class="font-body-md font-semibold">Hablar con un consultor</p>
+</div>
+</a>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-stack-lg rounded-2xl level-1-shadow border border-outline-variant">
+<form action="#" class="space-y-stack-md" method="POST">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-stack-xs uppercase">Nombre</label>
+<input class="w-full bg-background border border-outline-variant rounded-lg px-stack-md py-stack-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="Tu nombre completo" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-stack-xs uppercase">Empresa u Organización</label>
+<input class="w-full bg-background border border-outline-variant rounded-lg px-stack-md py-stack-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="Nombre de tu empresa" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-stack-xs uppercase">¿Cuál es tu mayor reto operativo hoy?</label>
+<textarea class="w-full bg-background border border-outline-variant rounded-lg px-stack-md py-stack-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="Descríbenos brevemente lo que quieres mejorar..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-stack-md rounded-xl font-label-lg text-label-lg hover:bg-primary-container active:scale-95 transition-all shadow-md" type="submit">
+                        Enviar mensaje
+                    </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-stack-xl bg-primary text-on-primary text-center">
+<div class="max-w-container-max mx-auto px-margin">
+<h2 class="font-headline-lg text-headline-lg mb-stack-md">¿Tu operación podría funcionar mejor?</h2>
+<p class="font-body-lg mb-stack-xl opacity-90 max-w-2xl mx-auto">Te ayudamos a identificar el problema y construir la solución correcta.</p>
+<div class="flex flex-col sm:flex-row gap-stack-md justify-center">
+<a class="bg-surface-container-lowest text-primary px-stack-lg py-stack-md rounded-xl font-label-lg text-label-lg hover:bg-white transition-all shadow-lg" href="#contact">
+                Solicitar diagnóstico gratuito
+            </a>
+<a class="border border-white/40 text-white px-stack-lg py-stack-md rounded-xl font-label-lg text-label-lg hover:bg-white/10 transition-all" href="#">
+                Escribirnos por WhatsApp
+            </a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-high border-t border-outline-variant w-full py-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter max-w-container-max mx-auto px-margin">
+<div class="md:col-span-4 flex flex-col gap-stack-xs">
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface">Jireh Code</h3>
+<p class="font-body-md text-body-md text-on-secondary-container">Consultoría y Desarrollo Tecnológico</p>
+</div>
+<div class="md:col-span-4 flex flex-wrap gap-stack-md items-center justify-center md:justify-start font-body-md text-body-md">
+<a class="text-on-secondary-container hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-secondary-container hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-on-secondary-container hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="text-on-secondary-container hover:text-primary transition-colors" href="#">WhatsApp</a>
+</div>
+<div class="md:col-span-4 flex items-center justify-center md:justify-end">
+<p class="font-body-md text-body-md text-on-secondary-container">
+                © 2024 Jireh Code Technology Consultancy. All rights reserved.
+            </p>
+</div>
+</div>
+</footer>
+</body></html>

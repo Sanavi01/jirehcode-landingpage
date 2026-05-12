@@ -1,0 +1,5 @@
+services:
+  jireh-landing:
+    build: .
+    container_name: jireh-landing
+    restart: unless-stopped
