@@ -1,5 +1,13 @@
 services:
   jireh-landing:
-    build: .
+    image: ghcr.io/sanavi01/jirehcode-landingpage:latest
     container_name: jireh-landing
+
     restart: unless-stopped
+
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
